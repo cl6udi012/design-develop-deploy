@@ -102,5 +102,32 @@ namespace UnitTests
             int result = calcObject.Mid(0, 3, 1);
             Assert.AreEqual(1, result);
         }
+        [TestMethod]
+        public void Test_Subtraction_ValidInput()
+        {
+            var calcObject = new Calculations();
+            double result = calcObject.Subtract(10, 4);
+            Assert.AreEqual(6.0, result);
+        }
+
+        [TestMethod]
+        public void Test_Divide_ValidInput()
+        {
+            var calcObject = new Calculations();
+            double result = calcObject.Divide(10, 2);
+            Assert.AreEqual(5.0, result);
+        }
+
+        [TestMethod]
+        public void Test_Add_NegativeNumbers()
+        {
+            var calcObject = new Calculations();
+            int result = calcObject.Add(-5, -3);
+            Assert.AreEqual(-8, result);
+        }
+
+
+
+
     }
 }

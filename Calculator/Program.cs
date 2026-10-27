@@ -6,24 +6,26 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            // Optional: Console application entry point logic goes here
+            Console.WriteLine("=== Calculator App ===");
+            var calc = new Calculations();
+            Console.WriteLine($"Test Add: 5 + 3 = {calc.Add(5, 3)}");
+            Console.WriteLine($"Test Subtract: 10 - 4 = {calc.Subtract(10, 4)}");
+            Console.WriteLine($"Test Mid: Median of 3, 9, 5 is {calc.Mid(3, 9, 5)}");
+            Console.ReadLine();
         }
     }
 
     public class Calculations
     {
-        // Constructor
         public Calculations()
         {
         }
 
-        // This method fixes the compilation error in your unit test
         public int Add(int num1, int num2)
         {
             return num1 + num2;
         }
 
-        // FIXED: Implemented subtraction logic instead of throwing an exception
         public double Subtract(int v1, int v2)
         {
             return v1 - v2;
@@ -40,7 +42,6 @@ namespace Calculator
 
         public int Mid(int x, int y, int z)
         {
-            // return median of x, y, z
             int mid = z;
             if (y < z)
             {
